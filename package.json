@@ -1,0 +1,47 @@
+{
+  "name": "sneaky-changer",
+  "displayName": "Sneaky Changer (Ultimate Prank)",
+  "description": "A kind-hearted prank extension that turns semicolons into Greek Question Marks locally, but keeps Git clean.",
+  "publisher": "DodhyRahmantyo",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dodhyk/sneaky-changer"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sneaky-changer.toggle",
+        "title": "Sneaky: Toggle Sneaky Mode (ON/OFF)"
+      },
+      {
+        "command": "sneaky-changer.infect",
+        "title": "Sneaky: Ubah ke U+037E (Kasih Error!)"
+      },
+      {
+        "command": "sneaky-changer.cure",
+        "title": "Sneaky: Kembalikan ke U+003B (Normal)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "16.x",
+    "typescript": "^5.1.3"
+  }
+}
